@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  margin: 0;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a[class] {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
