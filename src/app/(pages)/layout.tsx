@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { GothamPro, CenturyGothic, CormorantUnicase, AGaramondPro } from '@/utils/local-fonts';
 import '@/styles/index.scss';
+import { Footer, Header } from '@/components/common';
 
 export default function RootLayout({
   children,
@@ -16,7 +17,11 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={classNames}>{children}</body>
+      <body className={classNames}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

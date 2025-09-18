@@ -8,3 +8,4 @@ export { Quote } from './Quote/Quote';
 export { Paragraph } from './Paragraph/Paragraph';
 export { ScrollToTopButton } from './ScrollToTopButton/ScrollToTopButton';
 export { IconWrapper } from './IconWrapper/IconWrapper';
+export { Backdrop } from './Backdrop/Backdrop';
