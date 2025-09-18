@@ -5,14 +5,14 @@ $color_secondary-light: #c0c0c0;
 $color_accent: #be8900;
 $color_background: #1a1a1a;
 
-$font_primary: 'CenturyGothic', sans-serif;
-$font_secondary: 'GothamPro', sans-serif;
-$font_accent: 'CormorantUnicase', serif;
-$font_accent-2: 'AGaramondPro', serif;
+$font_primary: var(--font-primary, 'CenturyGothic', sans-serif);
+$font_secondary: var(--font-secondary, 'GothamPro', sans-serif);
+$font_accent: var(--font-accent, 'CormorantUnicase', serif);
+$font_accent-2: var(--font-accent-2, 'AGaramondPro', serif);
 
 $padding-sm: 1rem;
 $padding-md: 2rem;
-$padding-lg: 3rem;
+$padding-lg: 3.5rem;
 
 $duration_sm: 300ms;
 $duration_md: 500ms;
@@ -23,6 +23,7 @@ $easing_standard: ease-in-out;
 $z-index_modal: 900;
 $z-index_backdrop: 800;
 $z-index_header: 700;
+$z-index_bg_negative: -100;
 
 $screen_tablet: 768px;
 $screen_desktop-sm: 1280px;

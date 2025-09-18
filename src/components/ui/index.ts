@@ -1,3 +1,10 @@
 export { Button } from './Button/Button';
 export { Container } from './Container/Container';
 export { Section } from './Section/Section';
+export { Accordion } from './Accordion/Accordion';
+export { SliderPagination } from './SliderPagination/SliderPagination';
+export { SliderControlButton } from './SliderControlButton/SliderControlButton';
+export { Quote } from './Quote/Quote';
+export { Paragraph } from './Paragraph/Paragraph';
+export { ScrollToTopButton } from './ScrollToTopButton/ScrollToTopButton';
+export { IconWrapper } from './IconWrapper/IconWrapper';

@@ -3,9 +3,9 @@ import styles from './Hero.module.scss';
 
 export const Hero = () => {
   return (
-    <Section id="home-hero" className={styles.section}>
+    <Section fullHeight={true} className={styles.section}>
       <Container>
-        <div>Home page</div>
+        <div className={styles.wrapper}>Home page</div>
       </Container>
     </Section>
   );
