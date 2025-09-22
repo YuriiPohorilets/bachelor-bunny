@@ -1,4 +1,5 @@
 export { CrownIcon } from './CrownIcon/CrownIcon';
+export { DropdownArrowIcon } from './DropdownArrowIcon/DropdownArrowIcon';
 export { EnvelopIcon } from './EnvelopIcon/EnvelopIcon';
 export { FacebookIcon } from './FacebookIcon/FacebookIcon';
 export { InstagramIcon } from './InstagramIcon/InstagramIcon';

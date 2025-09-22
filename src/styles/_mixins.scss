@@ -15,7 +15,7 @@
 }
 
 @mixin hover {
-  &:not(:disabled, .disabled, :active, .active):is(:hover, :focus-visible) {
+  &:not(:disabled, .disabled, .active):is(:hover, :focus-visible) {
     @content;
   }
 }

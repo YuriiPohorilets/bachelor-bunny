@@ -6,6 +6,5 @@ export { Header } from './Header/Header';
 export { Logo } from './Logo/Logo';
 export { MobileMenu } from './MobileMenu/MobileMenu';
 export { Navigation } from './Navigation/Navigation';
-export { NavigationItem } from './NavigationItem/NavigationItem';
 export { SmoothScroll } from './SmoothScroll/SmoothScroll';
 export { Social } from './Social/Social';

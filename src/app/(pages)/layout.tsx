@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { localFonts } from '@/utils/local-fonts';
+import { GothamPro, CenturyGothic, CormorantUnicase, AGaramondPro } from '@/utils/local-fonts';
 import { Footer, Header, SmoothScroll } from '@/components/common';
 import '@/styles/index.scss';
 
@@ -8,7 +8,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const classNames = clsx(localFonts);
+  const classNames = clsx(
+    GothamPro.variable,
+    CenturyGothic.variable,
+    CormorantUnicase.variable,
+    AGaramondPro.variable
+  );
 
   return (
     <html lang="en">

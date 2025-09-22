@@ -1,6 +1,11 @@
 @use '@/styles/variables' as *;
 @use '@/styles/mixins' as *;
 
+.nav {
+  max-inline-size: 56rem;
+  inline-size: 100%;
+}
+
 .list {
   display: flex;
   flex-direction: column;
@@ -13,4 +18,18 @@
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  position: relative;
+}
+
+.link {
+  text-transform: uppercase;
 }

@@ -7,9 +7,9 @@ export enum PagePath {
   ContactUs = '/contact-us',
 }
 
-export type NavigationItem = {
+export type NavigationItemType = {
   id: string;
   label: string;
   href?: string;
-  subitems?: NavigationItem[];
+  subitems?: NavigationItemType[];
 };
