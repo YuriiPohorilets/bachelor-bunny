@@ -1,0 +1,19 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.footer {
+  padding-block-start: 2rem;
+  padding-block-end: 6.5rem;
+
+  @include desktop-sm {
+    padding-block-start: 8.75rem;
+    padding-block: 1.5rem;
+  }
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}

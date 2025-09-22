@@ -1,0 +1,18 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.copyright {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  font-family: $font_secondary;
+  font-size: 1.125rem;
+  line-height: 1;
+
+  @include desktop-sm {
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}

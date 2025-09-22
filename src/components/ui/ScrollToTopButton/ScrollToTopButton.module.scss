@@ -1,0 +1,21 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.button {
+  color: $color_primary;
+  font-family: $font_secondary;
+  font-size: 1.125rem;
+  line-height: 1;
+  text-transform: uppercase;
+
+  border: none;
+  background-color: transparent;
+
+  transition: color $duration_sm $easing_standard;
+
+  cursor: pointer;
+
+  @include hover {
+    color: $color_accent;
+  }
+}

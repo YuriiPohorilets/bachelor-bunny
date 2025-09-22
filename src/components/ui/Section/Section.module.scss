@@ -1,0 +1,10 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.section {
+  overflow: hidden;
+}
+
+.section.fullHeight {
+  block-size: max(100svh, 50.75rem);
+}

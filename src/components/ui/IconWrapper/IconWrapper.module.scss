@@ -1,0 +1,11 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.iconWrapper {
+  @include flex-center;
+
+  & > svg {
+    inline-size: 100%;
+    block-size: 100%;
+  }
+}

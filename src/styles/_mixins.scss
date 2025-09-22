@@ -1,0 +1,75 @@
+@use '@/styles/variables' as *;
+
+@mixin flex-center($direction: row, $display: flex) {
+  display: $display;
+  align-items: center;
+  justify-content: center;
+
+  @if $direction == column {
+    flex-direction: column;
+  }
+
+  @if $direction == row {
+    flex-direction: row;
+  }
+}
+
+@mixin hover {
+  &:not(:disabled, .disabled, .active):is(:hover, :focus-visible) {
+    @content;
+  }
+}
+
+@mixin active {
+  &:is(:active, .active) {
+    @content;
+  }
+}
+
+@mixin disabled {
+  &:is(:disabled, .disabled) {
+    cursor: not-allowed;
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: #{$screen_tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media screen and (min-width: #{$screen_desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin desktop-md {
+  @media screen and (min-width: #{$screen_desktop-md}) {
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media screen and (min-width: #{$screen_desktop-xl}) {
+    @content;
+  }
+}
+
+@mixin absolute-center($z-index: 0) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: $z-index;
+
+  translate: -50% -50%;
+}
+
+@mixin image-cover($position: 'center') {
+  inline-size: 100%;
+  block-size: 100%;
+
+  object-fit: cover;
+  object-position: $position;
+}

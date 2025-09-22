@@ -1,0 +1,16 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.container {
+  margin-inline: auto;
+  padding-inline: $padding-sm;
+  max-inline-size: $screen_desktop-xl;
+
+  @include tablet {
+    padding-inline: $padding-md;
+  }
+
+  @include desktop-sm {
+    padding-inline: $padding-lg;
+  }
+}
