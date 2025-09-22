@@ -2,4 +2,33 @@
 @use '@/styles/mixins' as *;
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: $z-index_header;
+
+  translate: -50% 0;
+
+  padding-block: 1.25rem;
+  inline-size: 100%;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 6%, #000 100%);
+
+  @include desktop-sm {
+    top: 2rem;
+
+    padding-block: 0;
+    background: transparent;
+  }
+
+  @include desktop-md {
+    top: 3.375rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
 }

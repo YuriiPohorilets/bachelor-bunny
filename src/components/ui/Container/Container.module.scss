@@ -10,7 +10,7 @@
     padding-inline: $padding-md;
   }
 
-  @include desktop-md {
+  @include desktop-sm {
     padding-inline: $padding-lg;
   }
 }

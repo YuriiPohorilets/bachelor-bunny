@@ -1,4 +1,4 @@
-enum PagePath {
+export enum PagePath {
   Home = '/',
   AboutUs = '/about-us',
   GrabAndGo = '/grad-and-go',
@@ -7,4 +7,9 @@ enum PagePath {
   ContactUs = '/contact-us',
 }
 
-export { PagePath };
+export type NavigationItem = {
+  id: string;
+  label: string;
+  href?: string;
+  subitems?: NavigationItem[];
+};

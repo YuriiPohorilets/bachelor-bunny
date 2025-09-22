@@ -1,13 +1,16 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import { Container, ScrollToTopButton } from '@/components/ui';
 import { Copyright } from '@/components/common';
-import { ScrollToTopButton } from '@/components/ui';
 import { PagePath } from '@/types/navigation';
+import { MediaQuery } from '@/types/media-query';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import styles from './Footer.module.scss';
 
 export const Footer: React.FC = () => {
   const pathname = usePathname();
+  const isDesktop = useMediaQuery(MediaQuery.DesktopSM);
   const showFooter = pathname !== PagePath.ContactUs;
 
   if (!showFooter) {
@@ -16,14 +19,16 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className={styles.footer}>
-      <div></div>
+      <Container>
+        <div></div>
 
-      <div></div>
+        <div></div>
 
-      <div>
-        <Copyright />
-        <ScrollToTopButton />
-      </div>
+        <div className={styles.copyright}>
+          <Copyright />
+          {isDesktop && <ScrollToTopButton />}
+        </div>
+      </Container>
     </footer>
   );
 };

@@ -1,7 +1,7 @@
 @use '@/styles/variables' as *;
 
-@mixin flex-center($direction: row) {
-  display: flex;
+@mixin flex-center($direction: row, $display: flex) {
+  display: $display;
   align-items: center;
   justify-content: center;
 

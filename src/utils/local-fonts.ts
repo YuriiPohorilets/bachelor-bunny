@@ -68,4 +68,5 @@ const AGaramondPro = localFont({
   variable: '--font-accent-2',
 });
 
-export { GothamPro, CenturyGothic, CormorantUnicase, AGaramondPro };
+const localFonts = { GothamPro, CenturyGothic, CormorantUnicase, AGaramondPro };
+export { localFonts };

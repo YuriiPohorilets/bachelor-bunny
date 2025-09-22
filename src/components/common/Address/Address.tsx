@@ -1,5 +1,9 @@
-import React from 'react';
+import styles from './Address.module.scss';
 
-export const Address = () => {
-  return <div>Address</div>;
+interface AddressProps {
+  direction: 'row' | 'column';
+}
+
+export const Address: React.FC<AddressProps> = ({ direction }) => {
+  return <address className={styles.address}>Address</address>;
 };

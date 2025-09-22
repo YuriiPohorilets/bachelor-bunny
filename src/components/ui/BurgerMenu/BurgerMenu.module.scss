@@ -1,0 +1,87 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.button {
+  @include flex-center;
+  gap: 0.375rem;
+
+  position: relative;
+  z-index: $z-index_modal + 1;
+
+  padding-block: 0.375rem;
+  padding-inline: 0;
+
+  color: $color_primary;
+
+  border: none;
+  background-color: transparent;
+  transition: color $duration_sm $easing_standard;
+
+  cursor: pointer;
+
+  @include hover {
+    color: $color_accent;
+  }
+}
+
+.label {
+  color: currentColor;
+  text-align: center;
+  font-family: $font_accent;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+
+  transition: translate $duration_sm $easing_standard, opacity $duration_sm $easing_standard;
+}
+
+.button.open > .label {
+  translate: -100%;
+  opacity: 0;
+}
+
+.icon {
+  position: relative;
+
+  padding-inline: 0.5rem;
+  padding-block: 0.5rem;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+
+  transition: opacity $duration_sm $easing_standard, rotate $duration_sm $easing_standard;
+}
+
+.iconItem {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+
+  background-color: $color_background;
+}
+
+.button.open > .icon {
+  rotate: 45deg;
+}
+
+.icon::before,
+.icon::after {
+  content: '';
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+
+  translate: -50% -50%;
+
+  inline-size: 100%;
+  block-size: 0.0625rem;
+
+  background-color: currentColor;
+  transform-origin: center;
+  transition: rotate $duration_sm $easing_standard;
+}
+
+.icon::before {
+  rotate: 90deg;
+}

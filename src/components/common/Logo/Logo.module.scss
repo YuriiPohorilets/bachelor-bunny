@@ -2,4 +2,37 @@
 @use '@/styles/mixins' as *;
 
 .logo {
+  @include flex-center(column, inline-flex);
+
+  color: $color_primary;
+
+  transition: color $duration_sm $easing_standard;
+
+  @include hover {
+    color: $color_accent;
+  }
+}
+
+.icon {
+  inline-size: 1.1875rem;
+  block-size: 0.875rem;
+
+  @include desktop-sm {
+    inline-size: 2.6875rem;
+    block-size: 2.125rem;
+  }
+}
+
+.text {
+  color: currentColor;
+  font-family: $font_accent;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+
+  @include desktop-sm {
+    display: none;
+  }
 }

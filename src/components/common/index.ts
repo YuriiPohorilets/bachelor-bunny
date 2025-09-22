@@ -1,7 +1,11 @@
-export { Header } from './Header/Header';
-export { Footer } from './Footer/Footer';
-export { Logo } from './Logo/Logo';
-export { Navigation } from './Navigation/Navigation';
-export { Social } from './Social/Social';
 export { Address } from './Address/Address';
 export { Copyright } from './Copyright/Copyright';
+export { Footer } from './Footer/Footer';
+export { FooterNavigation } from './FooterNavigation/FooterNavigation';
+export { Header } from './Header/Header';
+export { Logo } from './Logo/Logo';
+export { MobileMenu } from './MobileMenu/MobileMenu';
+export { Navigation } from './Navigation/Navigation';
+export { NavigationItem } from './NavigationItem/NavigationItem';
+export { SmoothScroll } from './SmoothScroll/SmoothScroll';
+export { Social } from './Social/Social';

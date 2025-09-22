@@ -2,17 +2,23 @@ import clsx from 'clsx';
 import styles from './IconWrapper.module.scss';
 
 interface IconWrapperProps {
-  icon: React.ReactNode;
+  Icon: React.ComponentType<{ color?: string; className?: string }>;
   component?: React.ElementType;
   className?: string;
+  color?: string;
 }
 
 export const IconWrapper: React.FC<IconWrapperProps> = ({
-  icon,
+  Icon,
   component: Component = 'span',
   className,
+  color = 'currentColor',
 }) => {
   const classNames = clsx(styles.iconWrapper, className);
 
-  return <Component className={classNames}>{icon}</Component>;
+  return (
+    <Component className={classNames}>
+      <Icon color={color} />
+    </Component>
+  );
 };

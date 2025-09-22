@@ -1,0 +1,16 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.button {
+  cursor: pointer;
+
+  @include hover {
+  }
+
+  @include disabled {
+  }
+}
+
+.button.fullWidth {
+  inline-size: 100% !important;
+}
