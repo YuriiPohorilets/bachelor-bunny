@@ -1,0 +1,10 @@
+export { Address } from './Address/Address';
+export { Copyright } from './Copyright/Copyright';
+export { Footer } from './Footer/Footer';
+export { FooterNavigation } from './FooterNavigation/FooterNavigation';
+export { Header } from './Header/Header';
+export { Logo } from './Logo/Logo';
+export { MobileMenu } from './MobileMenu/MobileMenu';
+export { Navigation } from './Navigation/Navigation';
+export { SmoothScroll } from './SmoothScroll/SmoothScroll';
+export { Social } from './Social/Social';

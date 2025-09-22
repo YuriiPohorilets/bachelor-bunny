@@ -1,1 +1,12 @@
+export { Accordion } from './Accordion/Accordion';
+export { Backdrop } from './Backdrop/Backdrop';
+export { BurgerMenu } from './BurgerMenu/BurgerMenu';
 export { Button } from './Button/Button';
+export { Container } from './Container/Container';
+export { IconWrapper } from './IconWrapper/IconWrapper';
+export { Paragraph } from './Paragraph/Paragraph';
+export { Quote } from './Quote/Quote';
+export { ScrollToTopButton } from './ScrollToTopButton/ScrollToTopButton';
+export { Section } from './Section/Section';
+export { SliderControlButton } from './SliderControlButton/SliderControlButton';
+export { SliderPagination } from './SliderPagination/SliderPagination';

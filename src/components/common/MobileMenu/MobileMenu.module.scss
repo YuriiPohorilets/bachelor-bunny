@@ -1,0 +1,22 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: $z-index_header;
+
+  padding-inline: 1.5rem;
+  padding-block-start: 2rem;
+  padding-block-end: 2rem;
+
+  inline-size: 100%;
+  block-size: 100vh;
+
+  background-color: $color_background;
+
+  @include tablet {
+    inline-size: 65%;
+  }
+}
