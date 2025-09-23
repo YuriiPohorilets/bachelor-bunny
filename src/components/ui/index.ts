@@ -6,6 +6,7 @@ export { Container } from './Container/Container';
 export { IconWrapper } from './IconWrapper/IconWrapper';
 export { Paragraph } from './Paragraph/Paragraph';
 export { Quote } from './Quote/Quote';
+export { Ripple } from './Ripple/Ripple';
 export { ScrollToTopButton } from './ScrollToTopButton/ScrollToTopButton';
 export { Section } from './Section/Section';
 export { SliderControlButton } from './SliderControlButton/SliderControlButton';

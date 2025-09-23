@@ -21,7 +21,7 @@
 }
 
 @mixin active {
-  &:is(:active, .active) {
+  &:not(:disabled, .disabled):is(:active, .active) {
     @content;
   }
 }
