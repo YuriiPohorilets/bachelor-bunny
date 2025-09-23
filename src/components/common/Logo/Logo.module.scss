@@ -6,10 +6,11 @@
 
   color: $color_primary;
 
-  transition: color $duration_sm $easing_standard;
+  transition: color $duration_sm $easing_standard, scale $duration_sm $easing_standard;
 
   @include hover {
     color: $color_accent;
+    scale: 1.05;
   }
 }
 
