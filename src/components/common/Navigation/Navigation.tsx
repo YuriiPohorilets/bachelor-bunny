@@ -25,8 +25,11 @@ export const Navigation: React.FC = () => {
   };
 
   const handleSubmenuToggle = (index: number) => {
-    if (isDesktop) return;
-    setSubmenuIndex(prevIndex => (prevIndex === index ? null : index));
+    if (isDesktop) {
+      setSubmenuIndex(index);
+    } else {
+      setSubmenuIndex(prevIndex => (prevIndex === index ? null : index));
+    }
   };
 
   useEffect(() => {
@@ -54,7 +57,7 @@ export const Navigation: React.FC = () => {
               <NavigationItem
                 item={item}
                 variant={hasSubmenu ? 'submenu' : 'default'}
-                onClick={() => (isDesktop ? handleSubmenuOpen(index) : handleSubmenuToggle(index))}
+                onSubmenuClick={() => handleSubmenuToggle(index)}
                 className={styles.link}
               />
 

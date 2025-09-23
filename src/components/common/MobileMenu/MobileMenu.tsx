@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useCallback, useEffect, useState } from 'react';
 import { useLenis } from 'lenis/react';
 import clsx from 'clsx';
 import { Navigation } from '@/components/common';
@@ -8,6 +9,7 @@ import { Backdrop, BurgerMenu } from '@/components/ui';
 import styles from './MobileMenu.module.scss';
 
 export const MobileMenu: React.FC = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const lenis = useLenis();
 
@@ -22,10 +24,18 @@ export const MobileMenu: React.FC = () => {
     });
   };
 
-  const handleCloseMenu = () => {
+  const handleCloseMenu = useCallback(() => {
     setIsOpen(false);
     lenis?.start();
-  };
+  }, [lenis]);
+
+  useEffect(() => {
+    handleCloseMenu();
+
+    return () => {
+      handleCloseMenu();
+    };
+  }, [handleCloseMenu, pathname]);
 
   return (
     <>
