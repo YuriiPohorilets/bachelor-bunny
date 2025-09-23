@@ -1,0 +1,14 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index_backdrop;
+
+  inline-size: 100%;
+  block-size: 100vh;
+
+  background-color: $color_background;
+}

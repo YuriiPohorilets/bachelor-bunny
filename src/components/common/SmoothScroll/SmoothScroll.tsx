@@ -35,7 +35,6 @@ export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
     autoRaf: true,
     duration: 2,
     lerp: 0,
-    prevent: node => node.id.includes('modal'),
   };
 
   return (

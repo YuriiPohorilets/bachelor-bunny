@@ -2,8 +2,15 @@
 @use '@/styles/mixins' as *;
 
 .nav {
-  max-inline-size: 56rem;
   inline-size: 100%;
+
+  @include desktop-sm {
+    max-inline-size: 46rem;
+  }
+
+  @include desktop-md {
+    max-inline-size: 56rem;
+  }
 }
 
 .list {
