@@ -4,6 +4,6 @@ interface AddressProps {
   direction: 'row' | 'column';
 }
 
-export const Address: React.FC<AddressProps> = ({ direction }) => {
+export const Address: React.FC<AddressProps> = ({}) => {
   return <address className={styles.address}>Address</address>;
 };

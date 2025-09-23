@@ -7,7 +7,7 @@ interface SocialProps {
 
 export const Social: React.FC<SocialProps> = ({}) => {
   return (
-    <ul>
+    <ul className={styles.list}>
       <li>
         <a href=""></a>
       </li>

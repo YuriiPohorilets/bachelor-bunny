@@ -7,7 +7,9 @@ interface ScrollToTopButtonProps {
 }
 
 export const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({ onClick }) => {
-  const handleClick = () => {};
+  const handleClick = () => {
+    onClick?.();
+  };
 
   return (
     <button type="button" onClick={handleClick} className={styles.button}>

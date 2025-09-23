@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { AnimatePresence, LayoutGroup, motion } from 'motion/react';
+import { AnimatePresence } from 'motion/react';
 import { NavigationItem, Submenu } from '@/components/common/Navigation/components';
 import { navigation } from '@/constants/navigation';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
