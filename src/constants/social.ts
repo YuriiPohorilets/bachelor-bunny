@@ -1,6 +1,7 @@
 import { FacebookIcon, InstagramIcon, YoutubeIcon } from '@/components/icons';
+import { SocialItemType } from '@/types/social';
 
-const socialList = [
+const socialList: SocialItemType[] = [
   {
     id: 'facebook',
     label: 'Facebook',
