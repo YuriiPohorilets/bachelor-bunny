@@ -16,15 +16,10 @@
   text-transform: uppercase;
 
   border: none;
-  transition: color $duration_sm $easing_standard, background-color $duration_sm $easing_standard,
-    scale $duration_sm $easing_standard;
+  transition: color $duration_sm $easing_standard, background-color $duration_sm $easing_standard;
 
   overflow: hidden;
   cursor: pointer;
-
-  @include active {
-    scale: 0.95;
-  }
 }
 
 .button.primary {

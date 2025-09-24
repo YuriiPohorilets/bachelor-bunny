@@ -1,4 +1,4 @@
-import { Button, Container, Section } from '@/components/ui';
+import { Button, Container, LinkButton, Section } from '@/components/ui';
 import styles from './Hero.module.scss';
 
 export const Hero = () => {
@@ -7,17 +7,8 @@ export const Hero = () => {
       <Container>
         <div className={styles.wrapper}>
           Home page
-          <div>
-            <Button>Make an order</Button>
-
-            <Button disabled>Make an order</Button>
-          </div>
-          <div>
-            <Button color="accent">Make an order</Button>
-            <Button color="accent" disabled>
-              Make an order
-            </Button>
-          </div>
+          <LinkButton href={'/'}>more</LinkButton>
+          <LinkButton href={'/'}>CONTACT US</LinkButton>
         </div>
       </Container>
     </Section>
