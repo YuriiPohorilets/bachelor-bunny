@@ -1,5 +1,6 @@
-import { Button, Container, LinkButton, Section } from '@/components/ui';
+import { Container, Section } from '@/components/ui';
 import styles from './Hero.module.scss';
+import { Social } from '@/components/common';
 
 export const Hero = () => {
   return (
@@ -7,8 +8,10 @@ export const Hero = () => {
       <Container>
         <div className={styles.wrapper}>
           Home page
-          <LinkButton href={'/'}>more</LinkButton>
-          <LinkButton href={'/'}>CONTACT US</LinkButton>
+          <Social direction="row" variant="icon" />
+          <Social direction="column" variant="icon" />
+          <Social direction="row" variant="text" />
+          <Social direction="column" variant="text" />
         </div>
       </Container>
     </Section>
