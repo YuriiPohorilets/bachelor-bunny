@@ -11,9 +11,52 @@
   }
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 3.25rem;
+}
+
+.action {
+}
+
+.logo {
+}
+
+.navigation {
+  align-self: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
+
+  inline-size: 100%;
+  max-inline-size: 65.75rem;
+
+  @include desktop-sm {
+    justify-content: space-between;
+  }
+}
+
+.navigationItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  color: $color_secondary;
+  font-family: $font_secondary;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .copyright {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
 }

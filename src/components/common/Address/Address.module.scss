@@ -35,14 +35,16 @@
 }
 
 .label {
-  margin-block-end: -0.125rem;
-
   color: currentColor;
   font-family: $font_secondary;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1;
+}
+
+.icon + .label {
+  margin-block-end: -0.125rem;
 }
 
 .icon {

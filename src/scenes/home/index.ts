@@ -1,2 +1,9 @@
-export { Hero } from './Hero/Hero';
 export { About } from './About/About';
+export { CateringAndEvents } from './CateringAndEvents/CateringAndEvents';
+export { GrabAndGo } from './GrabAndGo/GrabAndGo';
+export { Hero } from './Hero/Hero';
+export { InHomeExecutiveDelivery } from './InHomeExecutiveDelivery/InHomeExecutiveDelivery';
+export { MemberClub } from './MemberClub/MemberClub';
+export { OurClients } from './OurClients/OurClients';
+export { Quotes } from './Quotes/Quotes';
+export { Services } from './Services/Services';
