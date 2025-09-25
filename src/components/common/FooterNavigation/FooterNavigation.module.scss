@@ -1,0 +1,29 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.list {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5rem 2.5rem;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-block: 0.5rem;
+
+  color: $color_primary;
+  font-family: $font_secondary;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+
+  transition: color $duration_sm $easing_standard;
+
+  @include hover {
+    color: $color_accent;
+  }
+}

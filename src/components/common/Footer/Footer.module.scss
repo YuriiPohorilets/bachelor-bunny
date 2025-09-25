@@ -7,7 +7,7 @@
 
   @include desktop-sm {
     padding-block-start: 8.75rem;
-    padding-block: 1.5rem;
+    padding-block-end: 1.5rem;
   }
 }
 
@@ -16,12 +16,6 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 3.25rem;
-}
-
-.action {
-}
-
-.logo {
 }
 
 .navigation {
@@ -59,4 +53,8 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
+
+  @include desktop-sm {
+    align-items: center;
+  }
 }

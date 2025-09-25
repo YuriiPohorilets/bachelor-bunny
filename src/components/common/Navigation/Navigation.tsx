@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'motion/react';
 import { NavigationItem, Submenu } from '@/components/common/Navigation/components';
-import { navigation } from '@/constants/navigation';
+import { navigationList } from '@/constants/navigation';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { MediaQuery } from '@/types/media-query';
 import styles from './Navigation.module.scss';
@@ -43,7 +43,7 @@ export const Navigation: React.FC = () => {
   return (
     <nav className={styles.nav}>
       <ul className={styles.list}>
-        {navigation.map((item, index) => {
+        {navigationList.map((item, index) => {
           const hasSubmenu = item.subitems && item.subitems.length > 0;
           const isSubmenuOpen = submenuIndex === index;
 
