@@ -1,0 +1,20 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.wrapper {
+  display: flex;
+
+  inline-size: 93rem;
+  block-size: 56rem;
+
+  background: url('../../../assets/images/modal-order_bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+}
+
+.form {
+}

@@ -12,3 +12,31 @@
 
 .slider {
 }
+
+.orderButton {
+  position: fixed;
+  bottom: 32px;
+  right: 50%;
+  z-index: $z-index_modal;
+
+  translate: 50% 0;
+
+  max-inline-size: 25rem;
+  inline-size: calc(100% - 2rem);
+
+  @include desktop-sm {
+    bottom: auto;
+    top: 280px;
+    right: 1.5625rem;
+
+    rotate: -90deg;
+    translate: 0 0;
+    transform-origin: right center;
+  }
+}
+
+.orderModal {
+  top: 114px;
+  left: 0;
+  translate: 0 0;
+}

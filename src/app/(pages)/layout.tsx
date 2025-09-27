@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { GothamPro, CenturyGothic, CormorantUnicase, AGaramondPro } from '@/utils/local-fonts';
 import { Header, SmoothScroll } from '@/components/common';
+import { ModalProvider } from '@/app/(providers)/modal-provider';
 import '@/styles/index.scss';
 
 export default function RootLayout({
@@ -19,8 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={classNames}>
         <SmoothScroll>
-          <Header />
-          {children}
+          <ModalProvider>
+            <Header />
+            {children}
+          </ModalProvider>
         </SmoothScroll>
       </body>
     </html>

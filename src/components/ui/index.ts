@@ -5,6 +5,7 @@ export { Button } from './Button/Button';
 export { Container } from './Container/Container';
 export { IconWrapper } from './IconWrapper/IconWrapper';
 export { LinkButton } from './LinkButton/LinkButton';
+export { Modal } from './Modal/Modal';
 export { Paragraph } from './Paragraph/Paragraph';
 export { Quote } from './Quote/Quote';
 export { Ripple } from './Ripple/Ripple';

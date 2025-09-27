@@ -1,4 +1,5 @@
 export { ArrowIcon } from './ArrowIcon/ArrowIcon';
+export { CloseIcon } from './CloseIcon/CloseIcon';
 export { CrownIcon } from './CrownIcon/CrownIcon';
 export { DropdownArrowIcon } from './DropdownArrowIcon/DropdownArrowIcon';
 export { EnvelopIcon } from './EnvelopIcon/EnvelopIcon';
