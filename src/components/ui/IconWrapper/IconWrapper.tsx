@@ -6,6 +6,7 @@ interface IconWrapperProps {
   component?: React.ElementType;
   className?: string;
   color?: string;
+  onClick?: () => void;
 }
 
 export const IconWrapper: React.FC<IconWrapperProps> = ({
@@ -13,11 +14,13 @@ export const IconWrapper: React.FC<IconWrapperProps> = ({
   component: Component = 'span',
   className,
   color = 'currentColor',
+  onClick,
+  ...restProps
 }) => {
   const classNames = clsx(styles.iconWrapper, className);
 
   return (
-    <Component className={classNames}>
+    <Component {...restProps} onClick={onClick} className={classNames}>
       <Icon color={color} />
     </Component>
   );

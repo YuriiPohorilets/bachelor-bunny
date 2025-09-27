@@ -32,10 +32,6 @@ export const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose, classNa
     };
   }, [isOpen, onClose]);
 
-  // if (!isOpen) {
-  //   return null;
-  // }
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -46,14 +42,13 @@ export const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose, classNa
           data-lenis-prevent
           className={classNames}
         >
-          <button
-            type="button"
+          <IconWrapper
+            component="button"
             aria-label="Closes modal"
             onClick={onClose}
+            Icon={CloseIcon}
             className={styles.close}
-          >
-            <IconWrapper Icon={CloseIcon} />
-          </button>
+          />
 
           <div className={styles.content}>{children}</div>
         </motion.div>
