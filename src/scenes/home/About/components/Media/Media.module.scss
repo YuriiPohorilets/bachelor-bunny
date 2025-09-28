@@ -1,0 +1,26 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.media {
+  @include flex-center;
+}
+
+.imageWrapper {
+  position: relative;
+
+  inline-size: 100%;
+  block-size: 100%;
+  max-inline-size: 25.625rem;
+  max-block-size: 27.85rem;
+
+  @include desktop-sm {
+    max-inline-size: 34.125rem;
+    min-inline-size: 25.625rem;
+    max-block-size: 35.5rem;
+    min-block-size: 27.85rem;
+  }
+}
+
+.image {
+  @include image-cover;
+}

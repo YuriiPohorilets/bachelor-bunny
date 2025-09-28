@@ -2,6 +2,7 @@ export { Accordion } from './Accordion/Accordion';
 export { Backdrop } from './Backdrop/Backdrop';
 export { BurgerMenu } from './BurgerMenu/BurgerMenu';
 export { Button } from './Button/Button';
+export { Collapse } from './Collapse/Collapse';
 export { Container } from './Container/Container';
 export { IconWrapper } from './IconWrapper/IconWrapper';
 export { LinkButton } from './LinkButton/LinkButton';
