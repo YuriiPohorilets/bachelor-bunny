@@ -27,8 +27,7 @@
   left: 0;
 
   inline-size: 100%;
-  block-size: 0.0625rem;
-  min-block-size: 1px;
+  block-size: max(1px, 0.0625rem);
 
   background-color: currentColor;
 }

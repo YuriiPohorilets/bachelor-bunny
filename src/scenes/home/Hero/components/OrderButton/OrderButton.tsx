@@ -1,13 +1,17 @@
 'use client';
 
 import { AnimatePresence, motion } from 'motion/react';
+import clsx from 'clsx';
 import { Button } from '@/components/ui';
 import { useModal } from '@/app/(providers)/modal-context';
 import { ModalName } from '@/app/(providers)/types';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { MediaQuery } from '@/types/media-query';
 import styles from './OrderButton.module.scss';
 
 export const OrderButton: React.FC = () => {
   const { modalName, openModal } = useModal();
+  const isDesktop = useMediaQuery(MediaQuery.DesktopSM);
   const isModalOpen = modalName === ModalName.Order;
 
   const handleOrderClick = () => {
@@ -19,18 +23,16 @@ export const OrderButton: React.FC = () => {
 
   return (
     <AnimatePresence>
-      {!isModalOpen && (
-        <motion.div
-          initial={{ y: '100%' }}
-          animate={{ y: 0 }}
-          exit={{ y: '100%' }}
-          className={styles.orderButton}
+      <motion.div className={clsx(styles.orderButton, isModalOpen && styles.open)}>
+        <Button
+          disabled={isModalOpen}
+          fullWidth
+          onClick={handleOrderClick}
+          className={styles.button}
         >
-          <Button disabled={isModalOpen} fullWidth onClick={handleOrderClick}>
-            Make an order
-          </Button>
-        </motion.div>
-      )}
+          Make an order
+        </Button>
+      </motion.div>
     </AnimatePresence>
   );
 };

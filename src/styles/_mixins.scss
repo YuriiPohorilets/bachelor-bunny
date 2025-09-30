@@ -51,6 +51,12 @@
   }
 }
 
+@mixin desktop-lg {
+  @media screen and (min-width: #{$screen_desktop-lg}) {
+    @content;
+  }
+}
+
 @mixin desktop-xl {
   @media screen and (min-width: #{$screen_desktop-xl}) {
     @content;
@@ -72,4 +78,44 @@
 
   object-fit: cover;
   object-position: $position;
+}
+
+@mixin section-shadow($position, $block-size) {
+  position: relative;
+
+  @if $position == 'top' {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      inline-size: 100%;
+      block-size: $block-size;
+
+      background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+
+  @if $position == 'bottom' {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+
+      inline-size: 100%;
+      block-size: $block-size;
+
+      background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+
+      user-select: none;
+      pointer-events: none;
+    }
+  }
 }

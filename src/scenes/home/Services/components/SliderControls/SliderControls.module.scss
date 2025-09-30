@@ -1,0 +1,31 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.controls {
+  $frame-width: 56.25rem;
+  $frame-height: 13.125rem;
+
+  @include flex-center;
+  gap: 4rem;
+
+  padding-inline: 1.25rem;
+  padding-block: 2.375rem;
+  inline-size: 100%;
+  max-inline-size: $frame-width;
+}
+
+.prev {
+  display: none;
+
+  @include desktop-sm {
+    display: block;
+  }
+}
+
+.next {
+  display: none;
+
+  @include desktop-sm {
+    display: block;
+  }
+}

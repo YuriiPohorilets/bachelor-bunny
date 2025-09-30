@@ -50,7 +50,7 @@
 
       display: block;
       inline-size: 2.5rem;
-      block-size: 0.0625rem;
+      block-size: max(1px, 0.0625rem);
 
       background-color: $color_accent;
     }

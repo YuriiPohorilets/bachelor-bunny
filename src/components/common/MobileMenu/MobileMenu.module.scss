@@ -26,10 +26,6 @@
 
   transition: opacity $duration_md $easing_standard, visibility $duration_md $easing_standard,
     translate $duration_md $easing_standard;
-
-  @include tablet {
-    inline-size: 65%;
-  }
 }
 
 .menu.open {

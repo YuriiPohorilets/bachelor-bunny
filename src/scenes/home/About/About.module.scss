@@ -2,7 +2,11 @@
 @use '@/styles/mixins' as *;
 
 .section {
+  @include section-shadow('top', 14rem);
+  @include section-shadow('bottom', 14rem);
+
   position: relative;
+  z-index: -1;
 
   padding-block-start: 8rem;
   padding-block-end: 2.5rem;
@@ -13,6 +17,9 @@
   background-position: center;
 
   @include desktop-sm {
+    @include section-shadow('top', 20.375rem);
+    @include section-shadow('bottom', 20.375rem);
+
     padding-block-start: 15rem;
     padding-block-end: 16rem;
     min-block-size: 66.625rem;
