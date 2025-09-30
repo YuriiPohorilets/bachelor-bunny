@@ -3,15 +3,12 @@
 import { AnimatePresence, motion } from 'motion/react';
 import clsx from 'clsx';
 import { Button } from '@/components/ui';
-import { useModal } from '@/app/(providers)/modal-context';
-import { ModalName } from '@/app/(providers)/types';
-import { useMediaQuery } from '@/hooks/useMediaQuery';
-import { MediaQuery } from '@/types/media-query';
+import { useModal } from '@/app/(providers)/modal/modal-context';
+import { ModalName } from '@/app/(providers)/modal/types';
 import styles from './OrderButton.module.scss';
 
 export const OrderButton: React.FC = () => {
   const { modalName, openModal } = useModal();
-  const isDesktop = useMediaQuery(MediaQuery.DesktopSM);
   const isModalOpen = modalName === ModalName.Order;
 
   const handleOrderClick = () => {

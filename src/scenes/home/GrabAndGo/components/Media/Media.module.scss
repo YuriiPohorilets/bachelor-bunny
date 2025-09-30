@@ -25,6 +25,7 @@
 
 .imageWrapper {
   position: absolute;
+  overflow: hidden;
 }
 
 .imageWrapper:nth-of-type(1) {
