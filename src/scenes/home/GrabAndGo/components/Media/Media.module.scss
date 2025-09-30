@@ -1,0 +1,76 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.media {
+  position: absolute;
+  top: 14.875rem;
+  left: -4.375rem;
+  z-index: -1;
+
+  inline-size: 46.5rem;
+  block-size: 32.625rem;
+
+  @include desktop-sm {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    align-self: flex-start;
+
+    inline-size: 100%;
+    max-inline-size: 68.75rem;
+    block-size: 43.75rem;
+  }
+}
+
+.imageWrapper {
+  position: absolute;
+}
+
+.imageWrapper:nth-of-type(1) {
+  top: 0;
+  left: 0;
+
+  max-inline-size: 46.5rem;
+  max-block-size: 27.625rem;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    max-inline-size: 100%;
+    max-block-size: 100%;
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  }
+
+  @include desktop-sm {
+    min-inline-size: 46.5rem;
+    min-block-size: 27.625rem;
+    max-inline-size: 58.75rem;
+    max-block-size: 34.75rem;
+  }
+}
+
+.imageWrapper:nth-of-type(2) {
+  bottom: 0;
+  left: 2rem;
+
+  max-inline-size: 16.625rem;
+  max-block-size: 17rem;
+
+  @include desktop-sm {
+    left: auto;
+    right: 0;
+
+    max-inline-size: 29.125rem;
+    max-block-size: 29.875rem;
+  }
+}
+
+.image {
+  @include image-cover;
+}

@@ -1,0 +1,80 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.content {
+  max-inline-size: 31rem;
+
+  @include desktop-sm {
+    align-self: flex-end;
+  }
+}
+
+.titleWrapper {
+  margin-block-end: 4.5rem;
+
+  @include desktop-sm {
+    position: absolute;
+    bottom: 176px;
+    left: 98px;
+    z-index: 1;
+
+    margin-block-end: 0;
+  }
+}
+
+.title {
+  color: $color_primary;
+  text-align: center;
+  font-family: $font_accent;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+
+  @include desktop-sm {
+    font-size: 6.5rem;
+  }
+}
+
+.subtitle {
+  margin-block-end: 0.5rem;
+
+  color: $color_primary;
+  font-family: $font_accent;
+  font-size: 3.125rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+
+  @include desktop-sm {
+    display: none;
+  }
+}
+
+.description {
+  margin-block-end: 15.25rem;
+
+  font-size: 1.125rem;
+  line-height: 1.27778;
+
+  @include desktop-sm {
+    margin-block-end: 18.125rem;
+
+    text-align: justify;
+    white-space: pre-line;
+  }
+}
+
+.linkWRapper {
+  text-align: end;
+}
+
+.link {
+  inline-size: fit-content;
+
+  @include desktop-sm {
+    inline-size: 100%;
+    text-transform: uppercase;
+  }
+}
