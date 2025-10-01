@@ -13,7 +13,6 @@ export const Button: React.FC<ButtonProps> = ({
   className,
   children,
   color = 'primary',
-
   ...props
 }) => {
   const classNames = clsx(styles.button, styles[color], fullWidth && styles.fullWidth, className);

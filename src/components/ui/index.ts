@@ -4,6 +4,7 @@ export { BurgerMenu } from './BurgerMenu/BurgerMenu';
 export { Button } from './Button/Button';
 export { Collapse } from './Collapse/Collapse';
 export { Container } from './Container/Container';
+export { FormButton } from './FormButton/FormButton';
 export { IconWrapper } from './IconWrapper/IconWrapper';
 export { LinkButton } from './LinkButton/LinkButton';
 export { Modal } from './Modal/Modal';

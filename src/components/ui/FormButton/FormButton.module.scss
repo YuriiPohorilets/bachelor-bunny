@@ -1,0 +1,33 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  padding-block: 0.875rem;
+  padding-inline: 1rem;
+  min-inline-size: 7.25rem;
+
+  color: $color_primary;
+  font-family: $font_secondary;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1;
+
+  border: none;
+  background-color: $color_background;
+  transition: background-color $duration_sm $easing_standard;
+  cursor: pointer;
+
+  @include hover {
+    background-color: $color_accent;
+  }
+
+  @include disabled {
+    color: rgba($color_primary, 0.5);
+    background-color: rgba($color_background, 0.5);
+  }
+}

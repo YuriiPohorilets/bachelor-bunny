@@ -1,0 +1,17 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  inline-size: 100%;
+}
+
+.prevIcon {
+  & > svg {
+    rotate: 180deg;
+  }
+}

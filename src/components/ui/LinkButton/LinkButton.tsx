@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Link, { LinkProps } from 'next/link';
-import { ArrowIcon } from '@/components/icons';
+import { OutwardArrowIcon } from '@/components/icons';
 import { IconWrapper, Ripple } from '@/components/ui';
 import styles from './LinkButton.module.scss';
 
@@ -24,7 +24,7 @@ export const LinkButton: React.FC<LinkButtonProps> = ({
     <Ripple>
       <Link {...restProps} className={classNames}>
         <span className={styles.label}>{children}</span>
-        {!hideIcon && <IconWrapper Icon={ArrowIcon} className={styles.icon} />}
+        {!hideIcon && <IconWrapper Icon={OutwardArrowIcon} className={styles.icon} />}
       </Link>
     </Ripple>
   );
