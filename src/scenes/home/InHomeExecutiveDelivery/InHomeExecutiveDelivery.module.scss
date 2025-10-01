@@ -1,0 +1,107 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+$frame-width: 48.75rem;
+$frame-height: 26rem;
+
+.section {
+  position: relative;
+
+  padding-block-start: 6.25rem;
+  padding-block-end: 13.375rem;
+
+  @include desktop-sm {
+    padding-block-start: 4.5rem;
+    padding-block-end: 12.125rem;
+    min-block-size: 66.625rem;
+  }
+}
+
+.container {
+  @include desktop-sm {
+    // padding-inline-start: 12rem;
+    padding-inline-start: 10%;
+    padding-inline-end: 15.5rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16.25rem;
+
+  block-size: 100%;
+
+  @include desktop-sm {
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  margin-block-start: -2.5rem;
+
+  color: $color_primary;
+  font-family: $font_accent;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: pre-line;
+
+  @include desktop-sm {
+    margin-block-start: 0;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+
+  inline-size: 100%;
+  max-inline-size: 36.5rem;
+
+  @include desktop-sm {
+    gap: 4.375rem;
+
+    padding-inline: 5.875rem;
+    // padding-block-start: 4.5rem;
+    max-inline-size: $frame-width;
+  }
+}
+
+.description {
+  font-size: 1.125rem;
+
+  @include desktop-sm {
+    text-align: justify;
+    white-space: pre-line;
+  }
+}
+
+.pagination {
+  @include desktop-sm {
+    align-self: flex-end;
+  }
+}
+
+.link {
+  position: relative;
+  align-self: flex-end;
+
+  overflow: visible;
+}
+
+.linkLabel {
+  @include desktop-sm {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    translate: 0 100%;
+
+    inline-size: 100%;
+    text-align: center;
+  }
+}
