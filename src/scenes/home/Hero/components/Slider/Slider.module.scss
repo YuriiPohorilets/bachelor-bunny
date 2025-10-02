@@ -1,7 +1,7 @@
 @use '@/styles/variables' as *;
 @use '@/styles/mixins' as *;
 
-.slider {
+.swiper.slider {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,7 +26,7 @@
   }
 }
 
-.slide {
+.swiper.slider > .slide {
   @include flex-center;
   position: relative;
 

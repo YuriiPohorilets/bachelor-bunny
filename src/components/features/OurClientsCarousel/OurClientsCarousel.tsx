@@ -9,6 +9,7 @@ import SlideImg02 from '@/assets/images/home/clients_slide-02.jpg';
 import SlideImg03 from '@/assets/images/home/clients_slide-03.jpg';
 import SlideImg04 from '@/assets/images/home/clients_slide-04.jpg';
 import styles from './OurClientsCarousel.module.scss';
+import clsx from 'clsx';
 
 const slides = [
   {
@@ -96,7 +97,7 @@ export const OurClientsCarousel: React.FC<OurClientsCarouselProps> = ({ renderCo
         speed={800}
         onSwiper={onSwiperInit}
         onSlideChange={({ realIndex }) => onSwiperChange(realIndex)}
-        className={styles.slider}
+        className={clsx(styles.swiper, styles.slider)}
       >
         {slides.map(item => (
           <SwiperSlide key={item.id} className={styles.slide}>

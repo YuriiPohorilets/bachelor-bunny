@@ -10,13 +10,13 @@
   inline-size: 100%;
 }
 
-.slider {
+.swiper.slider {
   inline-size: 100%;
   block-size: 100%;
 
-  padding-inline: 1rem !important;
+  padding-inline: 1rem;
 }
 
-.slide {
+.swiper.slider > .slide {
   max-inline-size: 27.125rem;
 }
