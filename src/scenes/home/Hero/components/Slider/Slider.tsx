@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import clsx from 'clsx';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
 import SlideImg00 from '@/assets/images/home/hero_slide-00.jpg';
@@ -20,7 +21,7 @@ export const Slider: React.FC = () => {
       autoplay={{ delay: 3200 }}
       modules={[EffectFade, Autoplay]}
       preventClicks
-      className={styles.slider}
+      className={clsx(styles.swiper, styles.slider)}
     >
       {slides.map(({ id, src, alt }) => (
         <SwiperSlide key={id} className={styles.slide}>

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import clsx from 'clsx';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
 import styles from './Slider.module.scss';
@@ -20,7 +21,7 @@ export const Slider: React.FC<SliderProps> = ({ slides, onSwiper, onSlideChange 
       loop={true}
       onSwiper={onSwiper}
       onSlideChange={({ realIndex }) => onSlideChange(realIndex)}
-      className={styles.slider}
+      className={clsx(styles.swiper, styles.slider)}
     >
       {slides.map(({ id, src, alt }) => (
         <SwiperSlide key={id} className={styles.slide}>
