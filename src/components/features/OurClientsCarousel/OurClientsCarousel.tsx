@@ -100,7 +100,7 @@ export const OurClientsCarousel: React.FC<OurClientsCarouselProps> = ({ renderCo
         className={clsx(styles.swiper, styles.slider)}
       >
         {slides.map(item => (
-          <SwiperSlide key={item.id} className={styles.slide}>
+          <SwiperSlide key={item.id} className={clsx(styles.swiper, styles.slide)}>
             <ClientReview item={item.slide} />
           </SwiperSlide>
         ))}

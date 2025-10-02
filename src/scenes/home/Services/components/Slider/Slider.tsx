@@ -24,7 +24,7 @@ export const Slider: React.FC<SliderProps> = ({ slides, onSwiper, onSlideChange 
       className={clsx(styles.swiper, styles.slider)}
     >
       {slides.map(({ id, src, alt }) => (
-        <SwiperSlide key={id} className={styles.slide}>
+        <SwiperSlide key={id} className={clsx(styles.swiper, styles.slide)}>
           <Image src={src} alt={alt} fill={true} />
         </SwiperSlide>
       ))}
