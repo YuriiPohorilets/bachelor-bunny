@@ -1,3 +1,5 @@
+'use client';
+
 import clsx from 'clsx';
 import { motion } from 'motion/react';
 import { NavigationItem } from '@/components/common/Navigation/components';

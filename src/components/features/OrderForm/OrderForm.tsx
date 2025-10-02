@@ -3,7 +3,7 @@ import { Controls, Tabs } from './components';
 import styles from './OrderForm.module.scss';
 
 export const OrderForm = () => {
-  const { data, setFormValues, step, next, back, reset } = useOrderForm();
+  const { step, next, back } = useOrderForm();
 
   return (
     <div className={styles.wrapper}>
