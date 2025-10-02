@@ -1,0 +1,26 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.75rem;
+
+  padding-block-start: 1.75rem;
+  padding-block-end: 2.25rem;
+  block-size: 100%;
+
+  background-color: $color_primary;
+
+  overflow: hidden;
+}
+
+.tabs {
+  padding-inline: 2.375rem;
+}
+
+.form {
+  flex: 1;
+  padding-inline: 2.375rem;
+}

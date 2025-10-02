@@ -1,10 +1,9 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { usePathname } from 'next/navigation';
 import { cancelFrame, frame } from 'motion/react';
 import { LenisOptions } from 'lenis';
-import { ReactLenis, useLenis } from 'lenis/react';
+import { ReactLenis } from 'lenis/react';
 import type { LenisRef } from 'lenis/react';
 
 interface SmoothScrollProps {
@@ -13,8 +12,6 @@ interface SmoothScrollProps {
 
 export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
   const lenisRef = useRef<LenisRef>(null);
-  const lenis = useLenis();
-  const pathname = usePathname();
 
   useEffect(() => {
     const update = (data: { timestamp: number }) => {
@@ -26,10 +23,6 @@ export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
 
     return () => cancelFrame(update);
   }, []);
-
-  useEffect(() => {
-    lenis?.scrollTo(0, { immediate: true });
-  }, [lenis, pathname]);
 
   const options: LenisOptions = {
     autoRaf: true,

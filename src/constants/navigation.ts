@@ -1,6 +1,6 @@
 import { NavigationItemType, PagePath } from '@/types/navigation';
 
-const navigation: NavigationItemType[] = [
+const navigationList: NavigationItemType[] = [
   { id: 'nav-01', label: 'Home', href: PagePath.Home },
   { id: 'nav-02', label: 'About us', href: PagePath.AboutUs },
   {
@@ -15,7 +15,7 @@ const navigation: NavigationItemType[] = [
   { id: 'nav-07', label: 'Contact us', href: PagePath.ContactUs },
 ];
 
-const footerNavigation: NavigationItemType[] = [
+const footerNavigationList: NavigationItemType[] = [
   { id: 'nav-footer-01', label: 'Home', href: PagePath.Home },
   { id: 'nav-footer-02', label: 'Grab & Go', href: PagePath.GrabAndGo },
   { id: 'nav-footer-03', label: 'About us', href: PagePath.AboutUs },
@@ -24,4 +24,4 @@ const footerNavigation: NavigationItemType[] = [
   { id: 'nav-footer-06', label: 'Catering & Events', href: PagePath.CateringAndEvents },
 ];
 
-export { navigation, footerNavigation };
+export { navigationList, footerNavigationList };

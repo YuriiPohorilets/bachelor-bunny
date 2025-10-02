@@ -1,9 +1,9 @@
-$color_primary: #ffffff;
-$color_primary-dark: #262626;
-$color_secondary: #828282;
-$color_secondary-light: #c0c0c0;
-$color_accent: #be8900;
-$color_background: #1a1a1a;
+$color_primary: rgb(255, 255, 255);
+$color_primary-dark: rgb(38, 38, 38);
+$color_secondary: rgb(130, 130, 130);
+$color_secondary-light: rgb(192, 192, 192);
+$color_accent: rgb(190, 137, 0);
+$color_background: rgb(26, 26, 26);
 
 $font_primary: var(--font-primary, 'CenturyGothic', sans-serif);
 $font_secondary: var(--font-secondary, 'GothamPro', sans-serif);
@@ -23,9 +23,11 @@ $easing_standard: ease-in-out;
 $z-index_modal: 900;
 $z-index_backdrop: 800;
 $z-index_header: 700;
+$z-index_slider_negative: -10;
 $z-index_bg_negative: -100;
 
 $screen_tablet: 768px;
 $screen_desktop-sm: 1280px;
 $screen_desktop-md: 1440px;
+$screen_desktop-lg: 1536px;
 $screen_desktop-xl: 1920px;

@@ -1,0 +1,43 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+
+  @include desktop-sm {
+    gap: 0.75rem;
+  }
+}
+
+.button {
+  @include flex-center;
+
+  padding: 0;
+  inline-size: 0.625rem;
+  block-size: 0.625rem;
+
+  border-radius: 50%;
+  border: max(1px, 0.0625rem) solid;
+  border-color: $color_primary;
+  background-color: $color_background;
+
+  transition: border-color $duration_md $easing_standard,
+    background-color $duration_md $easing_standard;
+
+  cursor: pointer;
+
+  @include hover {
+    border-color: $color_accent;
+  }
+
+  @include desktop-sm {
+    inline-size: 1.25rem;
+    block-size: 1.25rem;
+  }
+}
+
+.button.current {
+  background-color: $color_primary;
+}

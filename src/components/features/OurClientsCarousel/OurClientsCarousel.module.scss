@@ -1,0 +1,22 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  inline-size: 100%;
+}
+
+.slider {
+  inline-size: 100%;
+  block-size: 100%;
+
+  padding-inline: 1rem !important;
+}
+
+.slide {
+  max-inline-size: 27.125rem;
+}

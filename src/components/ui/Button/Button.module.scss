@@ -2,12 +2,53 @@
 @use '@/styles/mixins' as *;
 
 .button {
+  @include flex-center;
+
+  padding-inline: 2rem;
+  padding-block-start: 1rem;
+  padding-block-end: calc(1rem - 0.0625rem);
+
+  font-family: $font_secondary;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  border: none;
+  transition: color $duration_sm $easing_standard, background-color $duration_sm $easing_standard;
+
+  overflow: hidden;
   cursor: pointer;
+}
+
+.button.primary {
+  color: $color_background;
+  background-color: $color_primary;
 
   @include hover {
+    color: $color_primary;
+    background-color: $color_accent;
   }
 
   @include disabled {
+    color: rgba($color_background, 0.5);
+    background-color: rgba($color_primary, 0.5);
+  }
+}
+
+.button.accent {
+  color: $color_primary;
+  background-color: $color_accent;
+
+  @include hover {
+    color: $color_background;
+    background-color: $color_primary;
+  }
+
+  @include disabled {
+    color: rgba($color_primary, 0.5);
+    background-color: rgba($color_accent, 0.5);
   }
 }
 

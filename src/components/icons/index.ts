@@ -1,3 +1,5 @@
+export { ArrowIcon } from './ArrowIcon/ArrowIcon';
+export { CloseIcon } from './CloseIcon/CloseIcon';
 export { CrownIcon } from './CrownIcon/CrownIcon';
 export { DropdownArrowIcon } from './DropdownArrowIcon/DropdownArrowIcon';
 export { EnvelopIcon } from './EnvelopIcon/EnvelopIcon';
@@ -6,4 +8,5 @@ export { InstagramIcon } from './InstagramIcon/InstagramIcon';
 export { OutwardArrowIcon } from './OutwardArrowIcon/OutwardArrowIcon';
 export { PhoneIcon } from './PhoneIcon/PhoneIcon';
 export { SliderControlsIcon } from './SliderControlsIcon/SliderControlsIcon';
+export { StarIcon } from './StarIcon/StarIcon';
 export { YoutubeIcon } from './YoutubeIcon/YoutubeIcon';

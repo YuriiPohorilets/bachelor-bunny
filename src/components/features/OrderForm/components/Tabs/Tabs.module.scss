@@ -1,0 +1,35 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.item {
+  position: relative;
+
+  color: $color_secondary;
+  font-family: $font_accent-2;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+
+  transition: color $duration_sm $easing_standard;
+}
+
+.item.active {
+  color: $color_background;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  inline-size: 100%;
+  block-size: max(1px, 0.0625rem);
+
+  background-color: $color_background;
+}

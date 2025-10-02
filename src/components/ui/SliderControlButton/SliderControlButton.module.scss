@@ -1,0 +1,45 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.button {
+  padding: 0;
+
+  color: $color_primary;
+
+  border: none;
+  background-color: transparent;
+  transition: color $duration_sm $easing_standard, scale $duration_sm $easing_standard;
+
+  cursor: pointer;
+
+  @include hover {
+    color: $color_accent;
+  }
+
+  @include active {
+    scale: 0.9;
+  }
+
+  @include disabled {
+    color: rgba($color_primary, 0.5);
+  }
+}
+
+.button.prev > .icon {
+  rotate: 180deg;
+}
+
+.button.sm {
+  inline-size: 4rem;
+  block-size: 4rem;
+}
+
+.button.md {
+  inline-size: 5rem;
+  block-size: 5rem;
+}
+
+.button.lg {
+  inline-size: 8.125rem;
+  block-size: 8.125rem;
+}

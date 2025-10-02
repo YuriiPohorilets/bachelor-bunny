@@ -1,0 +1,26 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.section {
+  position: relative;
+
+  padding-block: 6.25rem;
+
+  @include desktop-sm {
+    padding-block-start: 7.25rem;
+    padding-block-end: 11rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6.25rem;
+
+  block-size: 100%;
+
+  @include desktop-sm {
+    align-items: center;
+  }
+}

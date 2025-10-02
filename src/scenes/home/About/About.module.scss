@@ -1,0 +1,43 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.section {
+  @include section-shadow('top', 14rem);
+  @include section-shadow('bottom', 14rem);
+
+  position: relative;
+  z-index: -1;
+
+  padding-block-start: 8rem;
+  padding-block-end: 2.5rem;
+
+  background: url('../../../assets/images/home/about_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include desktop-sm {
+    @include section-shadow('top', 20.375rem);
+    @include section-shadow('bottom', 20.375rem);
+
+    padding-block-start: 15rem;
+    padding-block-end: 16rem;
+    min-block-size: 66.625rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2.125rem;
+
+  block-size: 100%;
+
+  @include desktop-sm {
+    justify-content: center;
+    flex-direction: row;
+    gap: 5.625rem;
+  }
+}

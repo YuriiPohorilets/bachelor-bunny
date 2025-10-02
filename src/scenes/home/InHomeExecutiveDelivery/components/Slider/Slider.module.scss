@@ -1,0 +1,72 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.slider {
+  $frame-width: 48.75rem;
+  $frame-height: 26rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-index_slider_negative;
+
+  margin-block-start: 6.25rem;
+  inline-size: 100%;
+  block-size: 100%;
+
+  user-select: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    inline-size: 100%;
+    block-size: 100%;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.8) 100%);
+  }
+
+  @include desktop-sm {
+    margin-block-start: 0;
+
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      100% 100%,
+      100% 0,
+      calc(10% + $frame-width) 0,
+      calc(10% + $frame-width) $frame-height,
+      10% $frame-height,
+      10% 0
+    );
+  }
+
+  @include desktop-xl {
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      100% 100%,
+      100% 0,
+      calc((100% - $screen_desktop-xl) / 2 + 10% + $frame-width) 0,
+      calc((100% - $screen_desktop-xl) / 2 + 10% + $frame-width) $frame-height,
+      calc((100% - $screen_desktop-xl) / 2 + 10%) $frame-height,
+      calc((100% - $screen_desktop-xl) / 2 + 10%) 0
+    );
+  }
+}
+
+.slide {
+  @include flex-center;
+  position: relative;
+
+  inline-size: 100%;
+  block-size: 100%;
+
+  & > img {
+    object-fit: cover;
+    object-position: center;
+  }
+}

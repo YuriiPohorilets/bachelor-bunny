@@ -1,0 +1,43 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: $z-index_modal;
+  translate: -50% -50%;
+
+  inline-size: fit-content;
+  block-size: fit-content;
+
+  background-color: transparent;
+}
+
+.close {
+  @include flex-center;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: $z-index_modal;
+
+  padding: 0;
+  block-size: 2rem;
+  inline-size: 2rem;
+
+  color: $color_primary;
+
+  border: none;
+  background-color: transparent;
+  transition: color $duration_sm $easing_standard;
+  cursor: pointer;
+
+  @include hover {
+    color: $color_accent;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: $z-index_modal - 1;
+}

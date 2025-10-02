@@ -1,5 +1,18 @@
 import type { Metadata } from 'next';
-import { Hero } from '@/scenes/home';
+import { Section } from '@/components/ui';
+import { Footer } from '@/components/common';
+import {
+  Hero,
+  About,
+  Services,
+  GrabAndGo,
+  InHomeExecutiveDelivery,
+  CateringAndEvents,
+  Quotes,
+  OurClients,
+  MemberClub,
+} from '@/scenes/home';
+import styles from './page.module.scss';
 
 export const metadata: Metadata = {
   title: 'Home | Bachelor Bunny Gourmet',
@@ -8,8 +21,22 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div>
-      <Hero />
-    </div>
+    <>
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <GrabAndGo />
+        <InHomeExecutiveDelivery />
+        <CateringAndEvents />
+        <Quotes />
+        <OurClients />
+      </main>
+
+      <Section className={styles.section}>
+        <MemberClub />
+        <Footer />
+      </Section>
+    </>
   );
 }

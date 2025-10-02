@@ -1,0 +1,105 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5.5rem;
+
+  max-inline-size: 50rem;
+
+  @include desktop-sm {
+    gap: 12.75rem;
+  }
+}
+
+.quoteWrapper {
+  max-inline-size: 26.75rem;
+
+  @include desktop-sm {
+    max-inline-size: 44.5rem;
+  }
+}
+
+.paragraphWrapper {
+  position: relative;
+
+  max-inline-size: 26.75rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    block-size: 100%;
+    inline-size: 0.125rem;
+    min-inline-size: 1px;
+
+    border-radius: 6.25rem;
+    background-color: $color_accent;
+  }
+
+  @include desktop-sm {
+    max-inline-size: none;
+    padding-inline-start: 2.875rem;
+
+    &::before {
+      display: block;
+    }
+  }
+}
+
+.paragraph {
+  text-align: start;
+
+  &::first-letter {
+    line-height: 0.7;
+  }
+
+  @include desktop-sm {
+    text-align: justify;
+
+    white-space: pre-line;
+  }
+}
+
+.collapse {
+  margin-block-start: 1rem;
+}
+
+.moreButton {
+  @include flex-center;
+  align-self: flex-end;
+  padding: 0.625rem;
+
+  color: $color_primary;
+  font-family: $font_secondary;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: underline;
+
+  border: none;
+  background-color: transparent;
+  transition: color $duration_sm $easing_standard;
+  cursor: pointer;
+
+  @include hover {
+    color: $color_accent;
+  }
+
+  @include desktop-sm {
+    display: none;
+  }
+}

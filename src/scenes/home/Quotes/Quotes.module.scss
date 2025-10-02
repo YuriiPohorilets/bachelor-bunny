@@ -1,0 +1,50 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.section {
+  padding-block-start: 10rem;
+  padding-block-end: 14rem;
+
+  @include desktop-sm {
+    padding-block-start: 30.75rem;
+    padding-block-end: 26.25rem;
+  }
+}
+
+.wrapper {
+  @include flex-center(column);
+  gap: 2rem;
+}
+
+.logo {
+  @include flex-center(column);
+
+  @include desktop-sm {
+    display: none;
+  }
+}
+
+.icon {
+  inline-size: 4.125rem;
+  block-size: 3rem;
+}
+
+.label {
+  color: $color_primary;
+  font-family: $font_accent;
+  font-size: 4.25rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.quote {
+  max-inline-size: 25.5rem;
+
+  @include desktop-sm {
+    max-inline-size: 71rem;
+
+    white-space: pre-line;
+  }
+}

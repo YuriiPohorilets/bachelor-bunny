@@ -1,0 +1,13 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.list {
+  @include flex-center;
+  gap: 0.25rem;
+}
+
+.item {
+  @include flex-center;
+  inline-size: 2rem;
+  block-size: 2rem;
+}

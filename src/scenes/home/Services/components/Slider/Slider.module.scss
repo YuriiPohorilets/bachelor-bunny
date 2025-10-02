@@ -1,0 +1,56 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.slider {
+  $frame-width: 56.25rem;
+  $frame-height: 13.125rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-index_slider_negative;
+
+  inline-size: 100%;
+  block-size: 100%;
+
+  user-select: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    inline-size: 100%;
+    block-size: 100%;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.8) 100%);
+  }
+
+  @include desktop-sm {
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      calc((100% - $frame-width) / 2) 100%,
+      calc((100% - $frame-width) / 2) calc(100% - $frame-height),
+      calc((100% + $frame-width) / 2) calc(100% - $frame-height),
+      calc((100% + $frame-width) / 2) 100%,
+      100% 100%,
+      100% 0
+    );
+  }
+}
+
+.slide {
+  @include flex-center;
+  position: relative;
+
+  inline-size: 100%;
+  block-size: 100%;
+
+  & > img {
+    object-fit: cover;
+    object-position: center;
+  }
+}

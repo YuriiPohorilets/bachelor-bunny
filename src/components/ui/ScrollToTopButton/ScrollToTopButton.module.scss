@@ -2,6 +2,9 @@
 @use '@/styles/mixins' as *;
 
 .button {
+  padding-inline: 0.5rem;
+  padding-block: 0.5rem;
+
   color: $color_primary;
   font-family: $font_secondary;
   font-size: 1.125rem;

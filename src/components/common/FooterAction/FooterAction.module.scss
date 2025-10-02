@@ -1,0 +1,83 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.875rem;
+
+  @include desktop-sm {
+    gap: 3.625rem;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+.icon {
+  inline-size: 2.625rem;
+  block-size: 2rem;
+
+  @include desktop-sm {
+    inline-size: 4.5rem;
+    block-size: 3.625rem;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  color: $color_primary;
+  font-family: $font_accent;
+  font-size: 2.125rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  & > span {
+    font-family: $font_secondary;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.36em;
+    line-height: 1;
+  }
+
+  @include desktop-sm {
+    font-size: 4.25rem;
+    letter-spacing: -0.01em;
+
+    & > span {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.description {
+  color: $color_primary;
+  text-align: center;
+  font-family: $font_primary;
+  font-size: 1.125rem;
+  letter-spacing: 0.03em;
+
+  @include desktop-sm {
+    display: none;
+  }
+}
+
+.link {
+  max-inline-size: 31rem;
+
+  & > span {
+    text-transform: uppercase;
+    font-size: 1.625rem;
+  }
+}

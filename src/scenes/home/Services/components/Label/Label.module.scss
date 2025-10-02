@@ -1,0 +1,58 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.label {
+  position: absolute;
+  top: 6.75rem;
+  left: 50%;
+  translate: -50% 0;
+
+  color: $color_primary;
+  font-family: $font-secondary;
+  font-size: 1.25rem;
+  line-height: 1;
+  text-transform: uppercase;
+
+  user-select: none;
+
+  @include desktop-sm {
+    top: auto;
+    bottom: 9.375rem;
+    left: 2.875rem;
+
+    translate: 0;
+
+    font-size: 1.375rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+.label::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+
+  translate: 0 100%;
+
+  inline-size: 100vw;
+  block-size: max(1px, 0.0625rem);
+
+  background-color: $color_accent;
+
+  @include desktop-sm {
+    display: none;
+  }
+
+  @include desktop-lg {
+    display: block;
+
+    bottom: 50%;
+    left: auto;
+    right: -1.625rem;
+
+    translate: 100% 50%;
+    inline-size: 15vw;
+    max-inline-size: 17.875rem;
+  }
+}
