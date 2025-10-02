@@ -11,7 +11,7 @@ const content = {
 export const Quotes = () => {
   return (
     <Section className={styles.section}>
-      <Container fullHeight>
+      <Container>
         <div className={styles.wrapper}>
           <h2 className="hidden">{content.title}</h2>
 

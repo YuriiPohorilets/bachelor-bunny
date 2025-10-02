@@ -1,3 +1,4 @@
+export { ClientReview } from './ClientReview/ClientReview';
 export { Faq } from './Faq/Faq';
 export { MenuCarousel } from './MenuCarousel/MenuCarousel';
 export { OrderForm } from './OrderForm/OrderForm';

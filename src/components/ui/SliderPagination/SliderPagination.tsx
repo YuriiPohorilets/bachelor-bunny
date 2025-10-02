@@ -22,7 +22,7 @@ export const SliderPagination: React.FC<SliderPaginationProps> = ({
           type="button"
           onClick={() => onChange(index)}
           aria-label={`Go to slide ${index}`}
-          className={clsx(styles.button, activeIndex === index && styles.active)}
+          className={clsx(styles.button, activeIndex === index && styles.current)}
         />
       ))}
     </div>

@@ -28,16 +28,16 @@
 
   cursor: pointer;
 
-  @include desktop-sm {
-    inline-size: 1.25rem;
-    block-size: 1.25rem;
-  }
-
   @include hover {
     border-color: $color_accent;
   }
 
-  @include active {
-    background-color: $color_primary;
+  @include desktop-sm {
+    inline-size: 1.25rem;
+    block-size: 1.25rem;
   }
+}
+
+.button.current {
+  background-color: $color_primary;
 }

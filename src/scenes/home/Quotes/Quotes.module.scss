@@ -14,8 +14,6 @@
 .wrapper {
   @include flex-center(column);
   gap: 2rem;
-
-  block-size: 100%;
 }
 
 .logo {

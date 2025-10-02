@@ -8,4 +8,5 @@ export { InstagramIcon } from './InstagramIcon/InstagramIcon';
 export { OutwardArrowIcon } from './OutwardArrowIcon/OutwardArrowIcon';
 export { PhoneIcon } from './PhoneIcon/PhoneIcon';
 export { SliderControlsIcon } from './SliderControlsIcon/SliderControlsIcon';
+export { StarIcon } from './StarIcon/StarIcon';
 export { YoutubeIcon } from './YoutubeIcon/YoutubeIcon';
