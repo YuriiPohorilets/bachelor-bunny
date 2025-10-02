@@ -43,6 +43,19 @@
       10% 0
     );
   }
+
+  @include desktop-xl {
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      100% 100%,
+      100% 0,
+      calc((100% - $screen_desktop-xl) / 2 + 10% + $frame-width) 0,
+      calc((100% - $screen_desktop-xl) / 2 + 10% + $frame-width) $frame-height,
+      calc((100% - $screen_desktop-xl) / 2 + 10%) $frame-height,
+      calc((100% - $screen_desktop-xl) / 2 + 10%) 0
+    );
+  }
 }
 
 .slide {

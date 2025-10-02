@@ -1,0 +1,114 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+$frame-width: 48.75rem;
+$frame-height: 23rem;
+
+.section {
+  position: relative;
+
+  padding-block-start: 3.125rem;
+  padding-block-end: 14rem;
+
+  @include desktop-sm {
+    padding-block-start: 3.125rem;
+    padding-block-end: 2.5rem;
+  }
+}
+
+.section::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  inline-size: 100%;
+  block-size: 100%;
+
+  background-image: url('../../../assets/images/home/events_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include desktop-sm {
+    clip-path: polygon(
+      calc(100% - ($frame-width + $padding-lg)) 100%,
+      0 100%,
+      0 0,
+      100% 0,
+      100% 100%,
+      calc(100% - $padding-lg) 100%,
+      calc(100% - $padding-lg) calc(100% - $frame-height),
+      calc(100% - ($frame-width + $padding-lg)) calc(100% - $frame-height)
+    );
+  }
+
+  @include desktop-xl {
+    clip-path: polygon(
+      calc(100% - ((100% - $screen_desktop-xl) / 2) - ($frame-width + $padding-lg)) 100%,
+      0 100%,
+      0 0,
+      100% 0,
+      100% 100%,
+      calc(100% - ((100% - $screen_desktop-xl) / 2) - $padding-lg) 100%,
+      calc(100% - ((100% - $screen_desktop-xl) / 2) - $padding-lg) calc(100% - $frame-height),
+      calc(100% - ((100% - $screen_desktop-xl) / 2) - ($frame-width + $padding-lg))
+        calc(100% - $frame-height)
+    );
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18.125rem;
+
+  block-size: 100%;
+
+  @include desktop-sm {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+
+.title {
+  color: $color_primary;
+  font-family: $font_accent;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: left;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  max-inline-size: 31.25rem;
+
+  @include desktop-sm {
+    gap: 1rem;
+
+    padding-inline-start: 6rem;
+    padding-inline-end: 11rem;
+    max-inline-size: $frame-width;
+  }
+}
+
+.description {
+  font-size: 1.125rem;
+
+  @include desktop-sm {
+    text-align: justify;
+    letter-spacing: 0.03em;
+    line-height: 1.27;
+  }
+}
+
+.link {
+  align-self: flex-end;
+}

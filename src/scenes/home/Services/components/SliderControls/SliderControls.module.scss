@@ -14,18 +14,11 @@
   max-inline-size: $frame-width;
 }
 
-.prev {
-  display: none;
-
-  @include desktop-sm {
-    display: block;
-  }
-}
-
+.prev,
 .next {
   display: none;
 
   @include desktop-sm {
-    display: block;
+    display: flex;
   }
 }

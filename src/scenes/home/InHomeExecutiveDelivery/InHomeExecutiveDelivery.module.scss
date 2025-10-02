@@ -19,7 +19,6 @@ $frame-height: 26rem;
 
 .container {
   @include desktop-sm {
-    // padding-inline-start: 12rem;
     padding-inline-start: 10%;
     padding-inline-end: 15.5rem;
   }
@@ -67,7 +66,6 @@ $frame-height: 26rem;
     gap: 4.375rem;
 
     padding-inline: 5.875rem;
-    // padding-block-start: 4.5rem;
     max-inline-size: $frame-width;
   }
 }
