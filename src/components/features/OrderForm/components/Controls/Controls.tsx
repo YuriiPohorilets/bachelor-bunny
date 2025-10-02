@@ -1,3 +1,5 @@
+'use client';
+
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowIcon } from '@/components/icons';
 import { FormButton, IconWrapper } from '@/components/ui';

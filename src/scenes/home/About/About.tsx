@@ -1,3 +1,5 @@
+'use client';
+
 import { LayoutGroup } from 'motion/react';
 import { Container, Section } from '@/components/ui';
 import { Content, Media } from './components';
