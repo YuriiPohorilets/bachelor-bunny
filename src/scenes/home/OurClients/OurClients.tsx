@@ -1,6 +1,6 @@
 'use client';
 
-import { Container, Section } from '@/components/ui';
+import { Container, Section, SliderControlButton, SliderPagination } from '@/components/ui';
 import { OurClientsCarousel } from '@/components/features';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { MediaQuery } from '@/types/media-query';
@@ -18,7 +18,27 @@ export const OurClients = () => {
       <Container disablePadding>
         <div className={styles.wrapper}>
           <h2 className={styles.title}>{content.title}</h2>
-          <OurClientsCarousel showPagination={!isDesktop} />
+          <OurClientsCarousel
+            renderControls={({
+              totalSlides,
+              activeIndex,
+              onChangeSlide,
+              onNextSlide,
+              onPrevSlide,
+            }) => (
+              <div className={styles.controls}>
+                <SliderControlButton variant="prev" size="md" onClick={onPrevSlide} />
+                {!isDesktop && (
+                  <SliderPagination
+                    totalSlides={totalSlides}
+                    activeIndex={activeIndex}
+                    onChange={onChangeSlide}
+                  />
+                )}
+                <SliderControlButton variant="next" size="md" onClick={onNextSlide} />
+              </div>
+            )}
+          />
         </div>
       </Container>
     </Section>

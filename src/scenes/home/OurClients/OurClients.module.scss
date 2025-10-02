@@ -54,3 +54,25 @@
     background-color: $color_accent;
   }
 }
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+
+  padding-inline: 1rem;
+  inline-size: 100%;
+  max-inline-size: 37.5rem;
+
+  @include desktop-sm {
+    align-self: flex-end;
+
+    padding-inline: 3.5rem;
+    max-inline-size: 56rem;
+  }
+
+  @include desktop-lg {
+    max-inline-size: 86rem;
+  }
+}

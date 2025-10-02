@@ -1,5 +1,3 @@
-'use client';
-
 import { StarIcon } from '@/components/icons';
 import styles from './Rating.module.scss';
 
@@ -30,9 +28,9 @@ export const Rating: React.FC<RatingProps> = ({ value }) => {
   return (
     <ul className={styles.list}>
       {getRatingArray(value).map((rating, index) => (
-        // <li key={index} className={styles.item}>
-        <StarIcon key={index} offset={rating} />
-        // </li>
+        <li key={index} className={styles.item}>
+          <StarIcon offset={rating} />
+        </li>
       ))}
     </ul>
   );

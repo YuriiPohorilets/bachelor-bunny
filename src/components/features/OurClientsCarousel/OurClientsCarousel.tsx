@@ -3,7 +3,6 @@
 import { useRef, useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { ClientReview } from '@/components/features';
-import { SliderControlButton, SliderPagination } from '@/components/ui';
 import SlideImg00 from '@/assets/images/home/clients_slide-00.jpg';
 import SlideImg01 from '@/assets/images/home/clients_slide-01.jpg';
 import SlideImg02 from '@/assets/images/home/clients_slide-02.jpg';
@@ -60,12 +59,25 @@ const slides = [
 ];
 
 interface OurClientsCarouselProps {
-  showPagination?: boolean;
+  renderControls?: ({
+    activeIndex,
+    totalSlides,
+    onNextSlide,
+    onPrevSlide,
+    onChangeSlide,
+  }: {
+    activeIndex: number;
+    totalSlides: number;
+    onNextSlide: () => void;
+    onPrevSlide: () => void;
+    onChangeSlide: (index: number) => void;
+  }) => React.ReactNode;
 }
 
-export const OurClientsCarousel: React.FC<OurClientsCarouselProps> = ({ showPagination }) => {
+export const OurClientsCarousel: React.FC<OurClientsCarouselProps> = ({ renderControls }) => {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const totalSlides = slides.length;
 
   const handlePrevSlide = () => swiperRef.current?.slidePrev();
   const handleNextSlide = () => swiperRef.current?.slideNext();
@@ -93,17 +105,14 @@ export const OurClientsCarousel: React.FC<OurClientsCarouselProps> = ({ showPagi
         ))}
       </Swiper>
 
-      <div className={styles.controls}>
-        <SliderControlButton variant="prev" size="md" onClick={handlePrevSlide} />
-        {showPagination && (
-          <SliderPagination
-            totalSlides={slides.length}
-            activeIndex={activeIndex}
-            onChange={handleChangeSlide}
-          />
-        )}
-        <SliderControlButton variant="next" size="md" onClick={handleNextSlide} />
-      </div>
+      {renderControls &&
+        renderControls({
+          activeIndex,
+          totalSlides,
+          onChangeSlide: handleChangeSlide,
+          onNextSlide: handleNextSlide,
+          onPrevSlide: handlePrevSlide,
+        })}
     </div>
   );
 };
